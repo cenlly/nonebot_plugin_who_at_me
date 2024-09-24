@@ -103,7 +103,7 @@ async def _(bot: Bot, event: MessageEvent):
         if time.time() - int(res.time) <= reminder_expire_time:
             message_list.append(
                 node_custom(
-                    content=res.message,
+                    content=f('{res.operator_name}在{res.time}艾特了您：{res.message}'),
                     user_id=res.operator_id,
                     name=res.operator_name,
                     time=res.time,
